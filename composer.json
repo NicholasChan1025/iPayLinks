@@ -1,0 +1,28 @@
+{
+    "name": "sinchan/ipaylinks",
+    "description": "ipaylinks sdk",
+    "keywords": ["sdk"],
+    "license": "Apache-2.0",
+    "authors": [{
+        "name": "sinchan",
+        "email": "651906195@qq.com"
+    }],
+    "require": {
+        "php": ">=7.1",
+        "ext-fileinfo": "*",
+        "ext-openssl": "*",
+        "ext-simplexml": "*",
+        "easywechat-composer/easywechat-composer": "^1.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "monolog/monolog": "^1.22",
+        "pimple/pimple": "^3.0",
+        "symfony/cache": "^3.3|^4.0",
+        "symfony/http-foundation": "^2.7|^3.0|^4.0",
+        "symfony/psr-http-message-bridge": "^0.3|^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "IPayLinks\\": "src/"
+        }
+      }
+}
