@@ -26,8 +26,19 @@ class Client extends BaseClient
             'signType'=>$this->app['config']['sign_type']
         ];
         $param['sign'] = Encryptor::makeSig($param,$this->app['config']['pkey']);
+        return $this->buildRequestForm($this->app['config']['url'],$param);
+    }
 
-        return json_encode($param);
+    protected function buildRequestForm($url, $data, $method = 'post')
+    {
+        $sHtml = "<form id='requestForm' name='requestForm' action='" . $url . "' method='" . $method . "'>";
+        foreach ($data as $key => $value) {
+            $sHtml .= "<input type='hidden' name='" . $key . "' value='" . $value . "' />";
+        }
+
+        $sHtml = $sHtml . "<input type='submit' value='确定' style='display:none;'></form>";
+        $sHtml = $sHtml . "<script>document.forms['requestForm'].submit();</script>";
+        return $sHtml;
     }
 
     public function query($param){
