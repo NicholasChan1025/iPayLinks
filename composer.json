@@ -1,8 +1,8 @@
 {
-    "name": "sinchan/ipaylinks",
+    "name": "sinchan1986/ipaylinks",
     "description": "ipaylinks sdk",
     "keywords": ["sdk"],
-    "license": "Apache-2.0",
+    "license": "MIT",
     "authors": [{
         "name": "sinchan",
         "email": "651906195@qq.com"
