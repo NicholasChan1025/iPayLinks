@@ -7,6 +7,11 @@
 
 namespace IPayLinks;
 
+/**
+ * Class Factory
+ * @package IPayLinks
+ * @method static \IPayLinks\Payment\Application payment(array $config)
+ */
 class Factory
 {
     /**
